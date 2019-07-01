@@ -22,10 +22,14 @@ import VaahVueClickToCopy from 'vaah-vue-clicktocopy'
 Vue.component('vh-copy', VaahVueClickToCopy)
 ```
 
-You can pass following properties to the vue components:
+You can pass following `props` to the vue components:
 
 ```html
-
+<vh-copy class="btn btn-primary" 
+:data="'String to Copy'" 
+:text="'Click to Copy'"
+@copied="copiedData"
+></vh-copy>
 ```
 
 

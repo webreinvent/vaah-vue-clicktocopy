@@ -40,4 +40,8 @@ export default {
 
 <style scoped>
 
+    .vaah-vue-clicktocopy{
+        cursor: pointer !important;
+    }
+
 </style>
