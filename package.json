@@ -1,6 +1,6 @@
 {
   "name": "vaah-vue-clicktocopy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Click To Copy Vue.js component",
   "repository": "git@github.com:webreinvent/vaah-vue-clicktocopy.git",
   "main": "dist/vaah-vue-clicktocopy.ssr.js",
