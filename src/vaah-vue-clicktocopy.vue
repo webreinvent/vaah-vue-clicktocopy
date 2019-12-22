@@ -66,6 +66,12 @@
     }
 </script>
 
+<template>
+    <span class="vaah-vue-clicktocopy" v-on:click="copyData()">
+        {{vh_label}}
+    </span>
+</template>
+
 <style scoped>
 
     .vaah-vue-clicktocopy{

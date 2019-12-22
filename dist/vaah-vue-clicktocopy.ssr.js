@@ -176,25 +176,27 @@ function renderStyles(styles) {
 var __vue_script__ = script;
 
 /* template */
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{staticClass:"vaah-vue-clicktocopy",on:{"click":function($event){return _vm.copyData()}}},[_vm._ssrNode(_vm._ssrEscape("\n    "+_vm._s(_vm.vh_label)+"\n"))])};
+var __vue_staticRenderFns__ = [];
 
   /* style */
   var __vue_inject_styles__ = function (inject) {
     if (!inject) { return }
-    inject("data-v-89dd50a4_0", { source: ".vaah-vue-clicktocopy[data-v-89dd50a4]{cursor:pointer!important}", map: undefined, media: undefined });
+    inject("data-v-f462403a_0", { source: ".vaah-vue-clicktocopy[data-v-f462403a]{cursor:pointer!important}", map: undefined, media: undefined });
 
   };
   /* scoped */
-  var __vue_scope_id__ = "data-v-89dd50a4";
+  var __vue_scope_id__ = "data-v-f462403a";
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-89dd50a4";
+  var __vue_module_identifier__ = "data-v-f462403a";
   /* functional template */
-  var __vue_is_functional_template__ = undefined;
+  var __vue_is_functional_template__ = false;
   /* style inject shadow dom */
   
 
   
   var __vue_component__ = normalizeComponent(
-    {},
+    { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
     __vue_scope_id__,
