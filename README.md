@@ -26,8 +26,9 @@ You can pass following `props` to the vue components:
 
 ```html
 <vh-copy class="btn btn-primary" 
-:data="'String to Copy'" 
-:text="'Click to Copy'"
+:data="'Data string to Copy'" 
+:label="'Text String to Display'"
+:confirm_dialog="'buefy'"
 @copied="copiedData"
 ></vh-copy>
 ```
