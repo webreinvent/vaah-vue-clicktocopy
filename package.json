@@ -1,6 +1,6 @@
 {
   "name": "vaah-vue-clicktocopy",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "Click To Copy Vue.js component",
   "repository": "git@github.com:webreinvent/vaah-vue-clicktocopy.git",
   "main": "dist/vaah-vue-clicktocopy.ssr.js",
@@ -20,16 +20,19 @@
     "copy-to-clipboard": "^3.2.0"
   },
   "devDependencies": {
-    "buefy": "*",
-    "cross-env": "^5.2.0",
+    "@rollup/plugin-alias": "^2.2.0",
+    "@rollup/plugin-buble": "^0.20.0",
+    "@rollup/plugin-replace": "^2.2.1",
+    "cross-env": "^6.0.3",
     "minimist": "^1.2.0",
-    "rollup": "^1.27.13",
-    "rollup-plugin-buble": "*",
-    "rollup-plugin-commonjs": "*",
-    "rollup-plugin-replace": "*",
-    "rollup-plugin-terser": "*",
-    "rollup-plugin-vue": "*",
-    "vue": "*",
-    "vue-template-compiler": "^*"
+    "rollup": "^1.26.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-vue": "5.1.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }

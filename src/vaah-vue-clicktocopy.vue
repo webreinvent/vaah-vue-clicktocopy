@@ -1,61 +1,69 @@
 <script>
-import copy from 'copy-to-clipboard';
-import {ToastProgrammatic as Toast} from "buefy";
+    import copy from 'copy-to-clipboard';
+    import {ToastProgrammatic as Toast} from "buefy";
 
-export default {
-    name: 'VaahVueClickToCopy', // vue component name
-    props:{
-        data:{
-            type: String,
-            default: null
+    export default {
+        name: 'VaahVueClickToCopy', // vue component name
+        props:{
+            data:{
+                type: String,
+                default: null
+            },
+            label:{
+                type: String,
+                default: null
+            },
+            confirm_dialog:{
+                type: String,
+                default: null
+            },
+            confirm_message:{
+                type: String,
+                default: 'Copied'
+            },
         },
-        label:{
-            type: String,
-            default: null
+        watch:{
+            data: function (newVal, oldVal) {
+                this.vh_data = newVal;
+            },
+            label: function (newVal, oldVal) {
+                this.vh_label = newVal;
+            },
+            confirm_dialog: function (newVal, oldVal) {
+                this.vh_confirm_dialog = newVal;
+            },
+            confirm_message: function (newVal, oldVal) {
+                this.vh_confirm_message = newVal;
+            },
         },
-        confirmDialog:{
-            type: String,
-            default: null
+        data() {
+            let obj = {
+                vh_data: this.data,
+                vh_label: this.label,
+                vh_confirm_dialog: this.confirm_dialog,
+                vh_confirm_message: this.confirm_message,
+            };
+            return obj
         },
-    },
-    watch:{
-        data: function (newVal, oldVal) {
-            this.vh_data = newVal;
-        },
-        label: function (newVal, oldVal) {
-            this.vh_label = newVal;
-        },
-        confirm_dialog: function (newVal, oldVal) {
-            this.vh_confirm_dialog = newVal;
-        },
-    },
-    data() {
-        let obj = {
-            vh_data: this.data,
-            vh_label: this.label,
-            vh_confirm_dialog: this.confirm_dialog,
-        };
-        return obj
-    },
-    methods: {
-        copyData: function () {
-            copy(this.vh_data);
-            this.$emit('copied', this.vh_data);
+        methods: {
+            copyData: function () {
+                copy(this.vh_data);
+                this.$emit('copied', this.vh_data);
 
-            if(this.vh_confirm_dialog === 'buefy')
-            {
-                this.buefyConfirmDialog();
+                if(this.vh_confirm_dialog === 'buefy')
+                {
+                    this.buefyConfirmDialog();
+                }
+
+            },
+            buefyConfirmDialog: function () {
+                Toast.open({
+                    message: this.vh_confirm_message,
+                    type: 'is-success'
+                });
             }
-
-        },
-        buefyConfirmDialog: function () {
-            Toast.open({
-                message: 'Copied',
-                type: 'is-success'
-            });
         }
     }
-}
 </script>
 
 <style scoped>

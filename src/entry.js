@@ -5,7 +5,7 @@ import component from './vaah-vue-clicktocopy.vue';
 function install(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component('vaah-vue-clicktocopy', component);
+  Vue.component('VaahVueClickToCopy', component)
 }
 
 // Create module definition for Vue.use()
