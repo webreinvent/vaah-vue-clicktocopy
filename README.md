@@ -25,14 +25,39 @@ Vue.component('vh-copy', VaahVueClickToCopy)
 You can pass following `props` to the vue components:
 
 ```html
-<vh-copy class="btn btn-primary" 
-:data="'Data string to Copy'" 
+<vh-copy class="btn btn-primary"
+:data="'Data string to Copy'"
 :label="'Text String to Display'"
 :confirm_dialog="'buefy'"
 @copied="copiedData"
 ></vh-copy>
 ```
 
+OR
+
+You can write label in between the tags as well:
+
+```html
+<vh-copy class="btn btn-primary"
+:data="'Data string to Copy'"
+:confirm_dialog="'buefy'"
+@copied="copiedData">
+Copy
+</vh-copy>
+```
+
+OR
+
+You can also write html tag for icon or anything:
+
+```html
+<vh-copy class="btn btn-primary"
+:data="'Data string to Copy'"
+:confirm_dialog="'buefy'"
+@copied="copiedData">
+<!--code for icon-->
+</vh-copy>
+```
 
 ## Support us
 
